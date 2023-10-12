@@ -5,7 +5,6 @@
 #define PI 3.14
 using namespace std;
 //Binary Search Tree by using object oriented programming
-/*
 struct node
 {
     node *left;
@@ -301,30 +300,9 @@ BST::~BST()
         deleteNode(root->item);
     }
 }
-int main()
-{
-    BST A;
-    A.insert(50);
-    A.insert(40);
-    A.insert(60);
-    A.insert(39);
-    A.insert(45);
-    A.insert(55);
-    BST B;
-    B=A;
-    // A.insert(65);
-    // A.insert(64);
-    // A.insert(63);
-    // A.insert(62);
-    // A.insert(61);
-    // A.insert(38);
-    // A.deleteNode(50);
-    B.inorder();
-    cout<<endl;
-    A.inorder();
-    return 0;
-}
-*/
+
+
+
 //Binary Tree
 class Node
 {
