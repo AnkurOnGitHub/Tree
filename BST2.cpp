@@ -296,12 +296,8 @@ void BST::rootNode()
 BST::~BST()
 {
     while(root)
-    {
         deleteNode(root->item);
-    }
 }
-
-
 
 //Binary Tree
 class Node
@@ -403,6 +399,8 @@ Node* BuildBST(Node* root)
         root->right=BuildTree(root->right);
 }
 */
+
+
 //Height of binary tree by using loop[level order traversal]
 int TreeHeightL(Node*root)
 {
@@ -430,6 +428,8 @@ int TreeHeightL(Node*root)
     }
     return height;
 }
+
+
 //Height of binary tree by using recursion
 int TreeHeightR(Node*root)
 {
@@ -442,12 +442,37 @@ int TreeHeightR(Node*root)
     return ans;
 }
 
+
+//Diameter of the binary tree
+int diameter(Node* root)
+{
+    int left=TreeHeightR(root->left);
+    int right=TreeHeightR(root->right);
+
+    int ans = left+right+1;
+    return ans;
+}
+
+
+//Zig Zag Level order traversal
+void ZigZig(Node* root)
+{
+    
+}
+
+
+
+
+
+
+
 int main()
 {
     Node* root=NULL;
     root=BuildTree(root);
     cout<<"Level order Tree : "<<endl;
     levelorder(root);
-    cout<<"\nHeight is "<<TreeHeightR(root);
+    cout<<"\nDiameter is "<<diameter(root)<<endl;
+    // cout<<"\nHeight is "<<TreeHeightR(root);
     return 0;
 }
